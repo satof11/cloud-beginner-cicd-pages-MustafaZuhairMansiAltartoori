@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CI/CD - GitHub Pages</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="top">
+    <div class="wrap top-inner">
+      <div>
+        <h1 class="site-title">CI/CD Deployment with GitHub Actions</h1>
+        <p class="sub">
+          <span><b>Name:</b> Mustafa Zuhair Mansi Altartoori</span>
+          <span class="sep">•</span>
+          <span><b>Course:</b> Cloud Computing</span>
+        </p>
+      </div>
+
+      <button class="btn ghost" id="toggleMode" aria-label="Toggle theme">
+        Toggle Theme
+      </button>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="grid">
+      <article class="card">
+        <h2>What is CI/CD?</h2>
+        <p>
+          CI/CD stands for Continuous Integration and Continuous Delivery/Deployment.
+          Continuous Integration means pushing changes frequently and running automated checks for quick feedback.
+          Continuous Delivery/Deployment means verified changes can be released automatically to a live environment.
+          In cloud systems, this reduces manual work, speeds up releases, and improves reliability.
+        </p>
+      </article>
+
+      <article class="card">
+        <h2>My Pipeline</h2>
+        <p>
+          When I push code to the <code>main</code> branch, GitHub Actions starts a workflow run automatically.
+          It checks that required files exist, uploads the website as an artifact, then deploys it to GitHub Pages.
+          After the run succeeds, the live site updates with my latest commit.
+        </p>
+        <ul class="mini">
+          <li><b>Push</b> → workflow starts</li>
+          <li><b>Checks</b> → required files verified</li>
+          <li><b>Deploy</b> → Pages updated</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="card">
+      <div class="row">
+        <div>
+          <h2>JavaScript Interaction</h2>
+          <p class="muted" id="message">
+            Click the button to change this message.
+          </p>
+        </div>
+        <div class="actions">
+          <button class="btn" id="changeText">Change Text</button>
+          <button class="btn ghost" id="reset">Reset</button>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="row">
+        <div>
+          <h3 class="h3">Mini Counter (optional nice touch)</h3>
+          <p class="muted">Counts how many times you interacted.</p>
+        </div>
+        <div class="counter">
+          <span class="count" id="count">0</span>
+          <span class="muted">clicks</span>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span class="muted">Deployed automatically using GitHub Actions → GitHub Pages</span>
+      <span class="muted mono" id="buildHint">Tip: show Actions green check in your video ✅</span>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
